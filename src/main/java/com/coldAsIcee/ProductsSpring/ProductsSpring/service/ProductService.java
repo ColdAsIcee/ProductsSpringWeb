@@ -6,16 +6,20 @@ import java.util.List;
 
 public interface ProductService {
 
-//    CRUD = create read update delete
 
-    List<Product> getAllProducts(); // getAll
+    List<Product> getAllProducts();
 
-    Product createProduct(Product product); // create
+    Product createProduct(Product product);
 
-    Product getById(Long id); // read
+    Product getById(Long id);
 
-    Product updateProduct(Product product); // update
+    Product updateProduct(Product product);
 
-    void deleteProductById(long id); // delete
+    void deleteProductById(long id);
+
+    // JPA Criteria
+    List<Product> searchProduct(List<SearchCriteria> params);
+
+    void save(Product product);
 
 }
